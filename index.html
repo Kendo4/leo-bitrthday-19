@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff2d6" />
+    <title>Happy 19th, 67 addicted</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Permanent+Marker&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="paper-texture" aria-hidden="true"></div>
+    <div class="sticker sticker-star">✦</div>
+    <div class="sticker sticker-scribble">meow<br />meow</div>
+
+    <div class="welcome" id="welcome">
+      <div class="welcome-card">
+        <span class="welcome-cat">ฅ^•ﻌ•^ฅ</span>
+        <p class="tiny-label">a tiny birthday surprise</p>
+        <h1>for <i>67 addicted</i></h1>
+        <p>Press the button. The cat has been waiting with your cake.</p>
+        <button id="startButton" type="button">enter the cozy party <span>→</span></button>
+      </div>
+    </div>
+
+    <main class="page">
+      <nav class="nav">
+        <a class="logo" href="#"><span class="logo-dot"></span> birthday club</a>
+        <span>28 / 09 / 2026</span>
+        <button class="sound-toggle" id="soundToggle" type="button">♫ <span id="soundLabel">sound on</span></button>
+      </nav>
+
+      <section class="hero">
+        <div class="copy">
+          <p class="eyebrow">official birthday announcement</p>
+          <h2>happy<br /><span>19th</span><br />birthday!</h2>
+          <p class="handwritten">a birthday message for Leo</p>
+          <p class="body-copy">Today is for cake, good music, and celebrating another year. Hope you have a great day and enjoy the occasion.</p>
+          <p class="song-status" id="songStatus">the birthday soundtrack is ready · <a href="https://www.youtube.com/watch?v=3kyn9Es4HoY" target="_blank" rel="noreferrer">open track ↗</a></p>
+        </div>
+
+        <div class="video-stage">
+          <div class="video-frame">
+            <div class="tape tape-one"></div>
+            <div class="tape tape-two"></div>
+            <video id="birthdayVideo" autoplay muted loop playsinline preload="auto">
+              <source src="cat-birthday.mp4" type="video/mp4" />
+              Your browser does not support video playback.
+            </video>
+            <div class="video-shade"></div>
+            <p class="video-caption">a cat is licking your birthday cake</p>
+          </div>
+          <div class="polaroid-note">best birthday<br />ever?</div>
+        </div>
+      </section>
+
+      <section class="cake-section" aria-labelledby="cake-title">
+        <div class="cake-copy">
+          <p class="eyebrow">one tiny birthday ritual</p>
+          <h3 id="cake-title">make a wish,<br /><em>Leo.</em></h3>
+          <p>There are 19 candles waiting for you. Allow the microphone, then blow toward it to reveal the birthday note.</p>
+          <button class="blow-button" id="blowButton" type="button">start candle detector <span>◌</span></button>
+          <button class="fallback-button" id="fallbackButton" type="button">tap to blow them out instead</button>
+          <p class="blow-status" id="blowStatus">your secret note is locked</p>
+        </div>
+        <div class="cake-display" id="cakeDisplay" aria-label="Birthday cake with 19 candles">
+          <div class="flame-glow"></div>
+          <div class="candles" id="candles"></div>
+          <div class="cake-icing"></div>
+          <div class="cake-body"></div>
+          <div class="cake-plate"></div>
+          <span class="cake-number">19</span>
+        </div>
+      </section>
+
+      <section class="birthday-card" id="birthdayCard" aria-live="polite">
+        <div class="card-paper">
+          <p class="eyebrow arabic-label" dir="rtl">رسالة عيد ميلاد</p>
+          <p class="arabic-note" dir="rtl">كل عام وانت بخير 🤍🎂<br>اتمنى لك سنه جديده تكون اخف واجمل عليك من كل اللي قبلها وتكون مليانه لحظات حلوه وذكريات تستاهل تتذكرها صراحه سعيده اني عرفتك وحتى لو ما صار لنا وقت طويل نعرف بعض فيه الا ان صداقتنا كانت من الاشياء الحلوه اللي صارت لي واستمتعت كثير بالكلام والضحك واللحظات اللي بيننا واتمنى تستمر صداقتنا وتكون بيننا دايم ايام حلوه وذكريات اكثر اتمنى تحقق اشياء كثير نفسك فيها وتوصل لكل اللي تتمناه وتكون هالسنه بدايه لاشياء جميله بحياتك استمتع بيومك على قد ما تقدر وانبسط ولا تخلي شي يعكر عليك يومك عيد ميلاد سعيد مره ثانيه وعقبال سنين كثير وانت بخير وسعاده وراحه بال 🤍</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>made with cake & cats</span>
+        <span>19 looks good on you</span>
+      </footer>
+    </main>
+
+    <div class="youtube-player" aria-hidden="true"><div id="youtubeFrame"></div></div>
+    <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
