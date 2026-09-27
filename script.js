@@ -63,10 +63,22 @@ document.head.append(apiScript);
 
 startButton.addEventListener("click", () => {
   welcome.classList.add("is-hidden");
-  birthdayVideo.play().catch(() => {});
+  playBirthdayVideo();
   startSong();
   createConfetti();
 });
+
+birthdayVideo.addEventListener("canplay", playBirthdayVideo);
+birthdayVideo.addEventListener("error", () => {
+  songStatus.textContent = "birthday video unavailable — upload cat-birthday.mp4 beside index.html";
+});
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) playBirthdayVideo();
+});
+
+function playBirthdayVideo() {
+  if (birthdayVideo.paused) birthdayVideo.play().catch(() => {});
+}
 
 soundToggle.addEventListener("click", () => {
   if (soundOn) stopSong();
